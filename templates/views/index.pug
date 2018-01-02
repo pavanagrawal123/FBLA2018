@@ -1,0 +1,47 @@
+extends ../layouts/default
+
+block content
+	.container-fluid
+		.row(style="background-color: #1b1a1e; padding-top: 50px; padding-bottom: 50px;")
+			.page-part#index-header
+				.col-sm-6
+					h2.heading(style="font-size: 4em;") FIND YOUR JOB
+					br
+					h1.heading(style="font-size: 6em; text-decoration: underline;") NOW
+		.row(style="background-image: url('/images/about-us.png');")
+			.page-part
+				.col-sm-4
+					h1.heading ABOUT US
+					h1 Welcome
+					p This is your new <a href='http://keystonejs.com' target='_blank'>KeystoneJS</a> website.
+					p It includes the latest versions of
+						| <a href='http://getbootstrap.com/' target='_blank'>Bootstrap</a>
+						| and <a href='http://www.jquery.com/' target='_blank'>jQuery</a>.
+					p Visit the <a href='http://keystonejs.com/guide' target='_blank'>Getting Started</a> guide to learn how to customise it.
+					hr
+					if user && user.canAccessKeystone
+						p
+							a(href='/keystone').btn.btn-lg.btn-primary Open the Admin UI
+					else
+						p We have created a default Admin user for you with the email <strong>pavanagrawal@outlook.com</strong> and the password <strong>admin</strong>.
+						p
+							a(href='/keystone/signin', style='margin-right: 10px').btn.btn-lg.btn-primary Sign in
+							|  to use the Admin UI.
+					hr
+					p Remember to <a href='https://github.com/keystonejs/keystone' target='_blank'>Star KeystoneJS on GitHub</a> and
+						| <a href='https://twitter.com/keystonejs' target='_blank'>follow @keystonejs</a> on twitter for updates.
+		.row(style="background-color: #1b1a1e; padding-top: 50px; padding-bottom: 50px;")
+			.container
+				.row
+					.col-sm-4
+						img(src="/images/index1.png").third-index
+						.inner-center-button Test
+					.col-sm-4
+						img(src="/images/index2.png").third-index
+						.inner-center-button Test
+					.col-sm-4
+						img(src="/images/index3.png").third-index
+						.inner-center-button Test
+		.row(style="background-color: #eaaa1f; padding-top: 50px; padding-bottom: 50px;")
+			.quote
+				h1 Blahshshshshshsh
