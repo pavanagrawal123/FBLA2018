@@ -1,0 +1,23 @@
+extends ../layouts/default
+
+block intro
+	.container
+		h1 Job Results
+	
+block content
+	.container
+		each job in jobs
+				.row
+					.col.s12.m7
+						.card
+							.card-image
+								img(src=job._.image.fit(750,450))
+								span.card-title 
+									=job.title
+							.card-content
+								p
+								| I am a very simple card. I am good at containing small bits of information.
+								| I am convenient because I require little markup to use effectively.
+							.card-action
+								a(href='#') This is a link
+
