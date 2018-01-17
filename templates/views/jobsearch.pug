@@ -5,10 +5,11 @@ block content
 		.row(style="display:flex;justify-content:center;align-items:center; background-image: url('/images/buildings.jpg'); min-height: 1000px; background-size: cover;")
 			div(style="padding: 20px; width: 100%; margin-top: 0px; background-color: RGBA(80, 98, 127, .6); color: #e2e2da;")
 				.col-md-4(style="")
-					h1.smaller(style="margin-bottom: 20px;") Search Directly On 
-					input(placeholder="Job Keyword or Title").jobsearchin.topcolor
-					br
-					input(placeholder="Location").jobsearchin.bottomcolor
+					form(action="/job")
+						h1.smaller(style="margin-bottom: 20px;") Search Directly On 
+						input(placeholder="Job Keyword or Title").jobsearchin.topcolor
+						br
+						input(placeholder="Location").jobsearchin.bottomcolor
 
 		.row(style="background-color: black; padding-top: 50px; padding-bottom: 50px;")
 			
