@@ -52,7 +52,7 @@ exports = module.exports = function (app) {
 };
 var user = new User({
     name: { first:'Abcd', last:'xyz' },
-    email: 'pavanagrawal@outlook.com',
+    email: 'pavan.a.123@outlook.com',
     password: 'password',
     isAdmin: true
 });
