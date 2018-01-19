@@ -32,19 +32,3 @@ User.relationship({ ref: 'Post', path: 'posts', refPath: 'author' });
  */
 User.defaultColumns = 'name, email, isAdmin';
 User.register();
-var user = new User({
-    name: { first:'Abcd', last:'xyz' },
-    email: 'pavanagrawal@outlook.com',
-    password: 'password',
-    isAdmin: true
-});
-
-user.save(function (err) {
-    if (err) {
-        // handle error
-        return console.log(err);
-    }
-
-    // user has been saved
-    console.log(user);
-});

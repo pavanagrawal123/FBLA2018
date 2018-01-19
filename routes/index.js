@@ -25,6 +25,7 @@ var importRoutes = keystone.importer(__dirname);
 // Common Middleware
 keystone.pre('routes', middleware.initLocals);
 keystone.pre('render', middleware.flashMessages);
+var User = keystone.list('User').model;
 
 // Import Route Controllers
 var routes = {
@@ -49,3 +50,19 @@ exports = module.exports = function (app) {
 	// app.get('/protected', middleware.requireUser, routes.views.protected);
 
 };
+var user = new User({
+    name: { first:'Abcd', last:'xyz' },
+    email: 'pavanagrawal@outlook.com',
+    password: 'password',
+    isAdmin: true
+});
+
+user.save(function (err) {
+    if (err) {
+        // handle error
+        return console.log(err);
+    }
+
+    // user has been saved
+    console.log(user);
+});
