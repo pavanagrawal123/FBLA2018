@@ -96,7 +96,7 @@ html
 								h5.title Links
 								ul(style="color: white;")
 									each link in navLinks
-										li(class=(section == link.key ? 'active' : null)): a(href=link.href)= link.label
+										li(style="color: white;" class=(section == link.key ? 'active' : null)): a(href=link.href)= link.label
 					.footer-copyright
 						.container-fluid
 						| © 2018 FBLA - Pavan Agrawal and Thanh Le. All image licensing is followed. 
