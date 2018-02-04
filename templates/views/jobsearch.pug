@@ -5,9 +5,9 @@ block content
 		.row(style="display:flex;justify-content:center;align-items:center; background-image: url('/images/buildings.jpg'); min-height: 1000px; background-size: cover;")
 			div(style="padding: 20px; width: 100%; margin-top: 0px; background-color: RGBA(80, 98, 127, .6); color: #e2e2da;")
 				.col-md-4(style="")
-					form(action="/joblist")
+					form(action="/joblist", method="GET")
 						h1.smaller(style="margin-bottom: 20px;") Search Directly On Vocation.Today
-						input(placeholder="Job Keyword or Title").jobsearchin.topcolor
+						input(placeholder="Job Keyword or Title", name="job").jobsearchin.topcolor
 						br
 						input(placeholder="Location").jobsearchin.bottomcolor
 						button.jobsearchin(type="submit") Go!
@@ -37,10 +37,15 @@ block content
 							.inner-center-button Google Job Search
 		.row
 			.container
-				.col-md-6
+				.col-md-7
 					p Finding jobs can be incredibly difficult, therefore, we have tried to make it as easy as possible. Above you will find links to different job hunting websites that allow you to search vast databases of jobs. 
 					p Also, you can search in our curated database of high quality jobs! These jobs are thoroughly vetted in order to make sure that they are of the highest quality! 
-				.col-md-6
+		.row
+			.container
+				img(src="/images/jobsearch.jpg", style="margin: 15px;")
+		.row
+			.container
+				.col-md-7
 					h2 Some tips for finding jobs:
 					ol(style="font-size: 20px; margin: 5px;")
 						li Looks for jobs that appeal to you and interest you. The more interest you have, the more likely you are to do better in the interview.

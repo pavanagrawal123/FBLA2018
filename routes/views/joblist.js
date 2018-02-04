@@ -9,7 +9,9 @@ exports = module.exports = function (req, res) {
 	locals.section = 'jobs';
 
 	// Load the galleries by sortOrder
-	view.query('jobs', keystone.list('Job').model.find());
+	view.query('jobs', keystone.list('Job').model.find({
+		'title': new RegExp(req.query.job, 'i')
+	}));
 
 	// Render the view
 	view.render('job');
