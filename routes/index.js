@@ -41,6 +41,7 @@ exports = module.exports = function (app) {
 	app.get('/application', routes.views.application);
 	app.get('/interviews', routes.views.interviews);
 	app.get('/joblist', routes.views.joblist);
+	app.all('/api/job/create', keystone.initAPI, routes.create.job);
 	app.get('/blog/:category?', routes.views.blog);
 	app.get('/blog/post/:post', routes.views.post);
 	app.get('/gallery', routes.views.gallery);
