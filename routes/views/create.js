@@ -3,7 +3,7 @@ var async = require('async'),
 	keystone = require('keystone');
     var Job = keystone.list('Job');
 
-exports.job = function (req, res) {
+    exports = module.exports = function (req, res) {
 	var item = new Job.model(),
 		data = (req.method == 'POST') ? req.body : req.query;
 	item.getUpdateHandler(req).process(data, function (err) {
