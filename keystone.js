@@ -31,6 +31,7 @@ keystone.init({
 		domains: ['vocation.today'],
 		register: true,
 		tos: true,
+		production: true
 	},
 });
 
