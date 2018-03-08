@@ -23,6 +23,15 @@ keystone.init({
 	'session': true,
 	'auth': true,
 	'user model': 'User',
+	'ssl port': 443,
+	ssl: 'force',
+
+	letsencrypt: (process.env.NODE_ENV === 'production') && {
+		email: 'pavanagrawal@outlook.com',
+		domains: ['www.vocation.today', 'vocation.today'],
+		register: true,
+		tos: true,
+	},
 });
 
 // Load your project's Models
