@@ -28,7 +28,7 @@ keystone.init({
 
 	letsencrypt: (process.env.NODE_ENV === 'production') && {
 		email: 'pavanagrawal@outlook.com',
-		domains: ['www.vocation.today', 'vocation.today'],
+		domains: ['vocation.today'],
 		register: true,
 		tos: true,
 	},
